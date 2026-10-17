@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AI Career Recommendation System</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 700px;
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            color: #777;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            color: #444;
+            margin-bottom: 7px;
+        }
+
+        input {
+            width: 100%;
+            padding: 13px;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            font-size: 16px;
+        }
+
+        input:focus {
+            border-color: #667eea;
+            outline: none;
+        }
+
+        .hint {
+            font-size: 13px;
+            color: #888;
+            margin-top: 5px;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            font-size: 17px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            opacity: 0.9;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 25px;
+            color: #999;
+            font-size: 13px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="header">
+
+        <h1>🎯 AI Career Recommendation</h1>
+
+        <p>
+            Rate your skills from 1 to 5 and discover suitable career options.
+        </p>
+
+    </div>
+
+
+    <form action="/predict" method="POST">
+
+        <div class="form-group">
+            <label>💻 Programming</label>
+
+            <input
+                type="number"
+                name="programming"
+                min="1"
+                max="5"
+                placeholder="1 - 5"
+                required
+            >
+
+            <div class="hint">
+                How comfortable are you with programming?
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <label>📐 Mathematics</label>
+
+            <input
+                type="number"
+                name="mathematics"
+                min="1"
+                max="5"
+                placeholder="1 - 5"
+                required
+            >
+
+            <div class="hint">
+                Rate your mathematics ability.
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <label>🗣️ Communication</label>
+
+            <input
+                type="number"
+                name="communication"
+                min="1"
+                max="5"
+                placeholder="1 - 5"
+                required
+            >
+
+            <div class="hint">
+                Rate your communication skills.
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <label>🎨 Creativity</label>
+
+            <input
+                type="number"
+                name="creativity"
+                min="1"
+                max="5"
+                placeholder="1 - 5"
+                required
+            >
+
+            <div class="hint">
+                Rate your creativity.
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <label>🧠 Problem Solving</label>
+
+            <input
+                type="number"
+                name="problem_solving"
+                min="1"
+                max="5"
+                placeholder="1 - 5"
+                required
+            >
+
+            <div class="hint">
+                How good are you at solving problems?
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <label>💡 Interest in Technology</label>
+
+            <input
+                type="number"
+                name="technology_interest"
+                min="1"
+                max="5"
+                placeholder="1 - 5"
+                required
+            >
+
+            <div class="hint">
+                How interested are you in technology?
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <label>📚 Learning Ability</label>
+
+            <input
+                type="number"
+                name="learning_ability"
+                min="1"
+                max="5"
+                placeholder="1 - 5"
+                required
+            >
+
+            <div class="hint">
+                Rate how quickly you learn new things.
+            </div>
+        </div>
+
+
+        <button type="submit">
+            Get My Career Recommendation 🚀
+        </button>
+
+    </form>
+
+
+    <div class="footer">
+        AI-Based Career Guidance System
+    </div>
+
+</div>
+
+</body>
+</html>
